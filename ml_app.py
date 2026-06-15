@@ -6,6 +6,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 from plotly.subplots import make_subplots
 from datetime import datetime, timedelta
+from io import StringIO
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.model_selection import train_test_split, cross_val_score, StratifiedKFold
 from sklearn.metrics import (classification_report, confusion_matrix,
@@ -239,7 +240,7 @@ def load_and_build(tickers):
 
 @st.cache_data(ttl=1800, show_spinner=False)
 def train_models(master_json):
-    master=pd.read_json(master_json)
+    master=pd.read_json(StringIO(master_json))
     X=master[FEATURE_COLS].values; y_clf=master['Label'].values
     y_reg=master['Fwd_1M'].values*100
 
