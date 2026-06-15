@@ -71,31 +71,62 @@ CHART_BG   = '#03091A'
 CHART_GRID = 'rgba(255,255,255,0.04)'
 C_GREEN='#10B981'; C_RED='#F43F5E'; C_CYAN='#00C9FF'; C_PURPLE='#8B5CF6'; C_AMBER='#F59E0B'
 
+# ── Nifty LargeMidcap 250 Universe ───────────────────────────────────────────
 TICKERS = [
-    'HDFCBANK.NS','ICICIBANK.NS','KOTAKBANK.NS','AXISBANK.NS','SBIN.NS',
-    'RELIANCE.NS','TCS.NS','INFY.NS','HCLTECH.NS','WIPRO.NS','TECHM.NS',
-    'HINDUNILVR.NS','ITC.NS','NESTLEIND.NS','BRITANNIA.NS','DABUR.NS',
-    'SUNPHARMA.NS','DRREDDY.NS','CIPLA.NS','DIVI.NS','LUPIN.NS',
-    'MARUTI.NS','TATAMOTORS.NS','M&M.NS','BAJAJ-AUTO.NS','HEROMOTOCO.NS',
-    'NTPC.NS','POWERGRID.NS','TATAPOWER.NS','COALINDIA.NS',
-    'TATASTEEL.NS','JSWSTEEL.NS','HINDALCO.NS','VEDL.NS',
-    'LT.NS','ABB.NS','SIEMENS.NS','BEL.NS',
-    'ASIANPAINT.NS','PIDILITIND.NS','TITAN.NS','TRENT.NS',
-    'BAJFINANCE.NS','BAJAJFINSV.NS','CHOLAFIN.NS','MUTHOOTFIN.NS',
-    'BHARTIARTL.NS','ULTRACEMCO.NS','GRASIM.NS','ONGC.NS',
-    'BPCL.NS','IOC.NS','ADANIENT.NS','ADANIPORTS.NS','ZOMATO.NS',
-    'APOLLOHOSP.NS','INDIGO.NS','PERSISTENT.NS',
+    # Large Cap — Nifty 100
+    'HDFCBANK.NS','ICICIBANK.NS','KOTAKBANK.NS','AXISBANK.NS','SBIN.NS','INDUSINDBK.NS',
+    'BANKBARODA.NS','PNB.NS','CANBK.NS','UNIONBANK.NS',
+    'RELIANCE.NS','ONGC.NS','BPCL.NS','IOC.NS','HINDPETRO.NS','GAIL.NS','PETRONET.NS',
+    'TCS.NS','INFY.NS','HCLTECH.NS','WIPRO.NS','TECHM.NS','LTIM.NS','PERSISTENT.NS',
+    'HINDUNILVR.NS','ITC.NS','NESTLEIND.NS','BRITANNIA.NS','DABUR.NS','MARICO.NS',
+    'COLPAL.NS','GODREJCP.NS',
+    'SUNPHARMA.NS','DRREDDY.NS','CIPLA.NS','DIVI.NS','LUPIN.NS','BIOCON.NS',
+    'TORNTPHARM.NS',
+    'MARUTI.NS','TATAMOTORS.NS','M&M.NS','BAJAJ-AUTO.NS','HEROMOTOCO.NS','EICHERMOT.NS',
+    'MOTHERSON.NS',
+    'NTPC.NS','POWERGRID.NS','TATAPOWER.NS','ADANIGREEN.NS','JSWENERGY.NS','COALINDIA.NS',
+    'TATASTEEL.NS','JSWSTEEL.NS','HINDALCO.NS','VEDL.NS','SAIL.NS','NMDC.NS',
+    'JINDALSTEL.NS',
+    'LT.NS','ABB.NS','SIEMENS.NS','BEL.NS','BOSCHLTD.NS',
+    'ASIANPAINT.NS','BERGEPAINT.NS','PIDILITIND.NS','SRF.NS','ASTRAL.NS',
+    'BAJFINANCE.NS','BAJAJFINSV.NS','CHOLAFIN.NS','MUTHOOTFIN.NS','SBICARD.NS',
+    'SBILIFE.NS','HDFCLIFE.NS','ICICIGI.NS','ICICIPRULI.NS',
+    'BHARTIARTL.NS','ULTRACEMCO.NS','GRASIM.NS','SHREECEM.NS',
+    'TITAN.NS','TRENT.NS','ADANIENT.NS','ADANIPORTS.NS','ZOMATO.NS',
+    'APOLLOHOSP.NS','INDIGO.NS','DLF.NS','LICI.NS',
+    # Mid Cap — Nifty Midcap 150
+    'APOLLOTYRE.NS','CEATLTD.NS','MINDA.NS','SONACOMS.NS','TIINDIA.NS',
+    'EXIDEIND.NS','SCHAEFFLER.NS','ENDURANCE.NS','SUPRAJIT.NS','MAHINDCIE.NS',
+    'ABCAPITAL.NS','ANGELONE.NS','CANFINHOME.NS','EQUITASBNK.NS','JMFINANCL.NS',
+    'LICHSGFIN.NS','MCX.NS','MOTILALOFS.NS','POONAWALLA.NS','SHRIRAMFIN.NS',
+    'SUNDARMFIN.NS','UJJIVAN.NS','UTIAMC.NS','IIFL.NS','MANAPPURAM.NS',
+    'RBLBANK.NS','FEDERALBNK.NS','KARURVYSYA.NS',
+    'COFORGE.NS','HAPPSTMNDS.NS','KPITTECH.NS','MPHASIS.NS','TATAELXSI.NS',
+    'TANLA.NS','MASTEK.NS','BIRLASOFT.NS','CYIENT.NS',
+    'AUROPHARMA.NS','GLAND.NS','GRANULES.NS','LALPATHLAB.NS','METROPOLIS.NS',
+    'NATCOPHARM.NS','PFIZER.NS','ALKYLAMINE.NS',
+    'ABFRL.NS','BATAINDIA.NS','DEVYANI.NS','JYOTHYLAB.NS','MANYAVAR.NS',
+    'RADICO.NS','VSTIND.NS',
+    'AARTIIND.NS','DEEPAKFERT.NS','FINEORG.NS','FLUOROCHEM.NS','GALAXYSURF.NS',
+    'GNFC.NS','NAVINFLUOR.NS','NOCIL.NS','PIIND.NS','VINATI.NS',
+    'CUMMINSIND.NS','GRINDWELL.NS','KEC.NS','KNRCON.NS','NCC.NS',
+    'THERMAX.NS','WELSPUNIND.NS','APLAPOLLO.NS',
+    'BRIGADE.NS','GODREJPROP.NS','OBEROI.NS','PHOENIXLTD.NS','PRESTIGE.NS',
+    'SOBHA.NS','SUNTECK.NS',
+    'NATIONALUM.NS','RATNAMANI.NS','WELCORP.NS','MOIL.NS','GPIL.NS',
+    'NAZARA.NS','PVRINOX.NS','SAREGAMA.NS',
+    'CREDITACC.NS','KFINTECH.NS',
 ]
-TICKERS = list(dict.fromkeys(TICKERS))
+TICKERS = list(dict.fromkeys(TICKERS))  # ~200 stocks, deduped
 
 FEATURE_COLS = [
     'Price_EMA20_Ratio','Price_EMA50_Ratio','Price_SMA200_Ratio',
     'EMA20_EMA50_Ratio','EMA50_SMA200_Ratio',
-    'RSI_14','MACD_Ratio','MACD_Hist','ROC_5','ROC_10','ROC_21','ROC_63','Mom_12_1',
+    'RSI_14','MACD_Ratio','MACD_Hist','ROC_5','ROC_10','ROC_21','ROC_63','Mom_6_1',
     'ATR_Pct','HV_20','BB_Pct',
     'Vol_Ratio','CMF_20','OBV_ROC',
     'ADX_14','DI_Diff','Stoch_K','Stoch_D',
-    'High_52W_Pct','Low_52W_Pct',
+    'High_6M_Pct','Low_6M_Pct',
 ]
 
 def chl(fig, title='', h=400):
@@ -136,7 +167,7 @@ def compute_features(df):
     df['ROC_10']=c.pct_change(10)*100
     df['ROC_21']=c.pct_change(21)*100
     df['ROC_63']=c.pct_change(63)*100
-    df['Mom_12_1']=c.pct_change(252)-c.pct_change(21)
+    df['Mom_6_1']=c.pct_change(126)-c.pct_change(21)   # 6M-1M momentum (avoids 252-bar need)
     tr=pd.concat([(h-l),(h-c.shift()).abs(),(l-c.shift()).abs()],axis=1).max(axis=1)
     df['ATR_14']=tr.ewm(span=14,adjust=False).mean()
     df['ATR_Pct']=df['ATR_14']/c.replace(0,np.nan)*100
@@ -159,17 +190,17 @@ def compute_features(df):
     l14=l.rolling(14).min(); h14=h.rolling(14).max()
     df['Stoch_K']=100*(c-l14)/(h14-l14).replace(0,np.nan)
     df['Stoch_D']=df['Stoch_K'].rolling(3).mean()
-    df['High_52W']=h.rolling(252).max()
-    df['High_52W_Pct']=c/df['High_52W']
-    df['Low_52W']=l.rolling(252).min()
-    df['Low_52W_Pct']=c/df['Low_52W']
+    df['High_6M']=h.rolling(126).max()          # 6-month high (126 bars, not 252)
+    df['High_6M_Pct']=c/df['High_6M']
+    df['Low_6M']=l.rolling(126).min()
+    df['Low_6M_Pct']=c/df['Low_6M']
     df['Fwd_1M']=c.shift(-21)/c-1
     df['Fwd_3M']=c.shift(-63)/c-1
     return df
 
 @st.cache_data(ttl=1800, show_spinner=False)
 def load_and_build(tickers):
-    END=datetime.today(); START=END-timedelta(days=420)
+    END=datetime.today(); START=END-timedelta(days=730)   # 2 years — ensures 126-bar warmup + forward labels
     all_dfs={}
     for tkr in tickers:
         try:
@@ -184,7 +215,7 @@ def load_and_build(tickers):
     records=[]
     for tkr,df in all_dfs.items():
         sub=df[FEATURE_COLS+['Fwd_1M','Fwd_3M','Ticker']].dropna()
-        sub=sub.iloc[:-25] if len(sub)>50 else sub
+        sub=sub.iloc[:-25] if len(sub)>60 else sub   # drop last 25 rows (forward label unknown)
         records.append(sub)
     if not records:
         return None, None, {}
@@ -284,8 +315,8 @@ with st.sidebar:
     </div>""", unsafe_allow_html=True)
     st.divider()
 
-    n_stocks = st.slider('Stocks to analyse', 20, len(TICKERS), 40, 5,
-        help='More stocks = better model, slower loading. 40 recommended.')
+    n_stocks = st.slider('Stocks to analyse', 30, len(TICKERS), 60, 10,
+        help=f'Nifty LargeMidcap 250 universe — {len(TICKERS)} stocks. 60 recommended for speed.')
     sel_tickers = TICKERS[:n_stocks]
 
     run_btn = st.button('🚀 Train Models', use_container_width=True)
@@ -308,7 +339,7 @@ with st.sidebar:
 st.markdown(f"""
 <div class="ml-header">
   <div class="header-title">🤖 AlphaLens ML — Indian Markets</div>
-  <div class="header-sub">3 ML Models · XGBoost Classifier · Random Forest Regressor · Portfolio Optimizer · {len(sel_tickers)} Nifty 100 Stocks</div>
+  <div class="header-sub">3 ML Models · XGBoost Classifier · Random Forest Regressor · Portfolio Optimizer · {len(sel_tickers)} Nifty LargeMidcap 250 Stocks · 2Y Data</div>
 </div>""", unsafe_allow_html=True)
 
 if 'models_ready' not in st.session_state:
