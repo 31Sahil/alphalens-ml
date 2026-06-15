@@ -537,7 +537,6 @@ with tabs[1]:
                 x=rd['fpr'], y=rd['tpr'], mode='lines',
                 name=f'{nm} (AUC={rd["auc"]:.3f})',
                 line=dict(color=clr, width=2),
-                fill='tozeroy', fillcolor=clr.replace('#','rgba(').replace(')',',0.04)') if False else 'none',
             ))
         fig_roc.add_trace(go.Scatter(x=[0,1],y=[0,1],mode='lines',name='Random',
             line=dict(color='#4A5A80',dash='dash',width=1)))
